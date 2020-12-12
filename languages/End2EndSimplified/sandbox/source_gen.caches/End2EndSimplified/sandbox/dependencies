@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="End2EndSimplified.sandbox.map_Canvas">
+    <classNode dependClassName="java.lang.InterruptedException" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.lang.System" />
+    <classNode dependClassName="org.openqa.selenium.WebDriver" />
+    <classNode dependClassName="org.openqa.selenium.chrome.ChromeDriver" />
+  </dependency>
+</dependenciesRoot>
+

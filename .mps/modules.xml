@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MPSProject">
+    <projectModules>
+      <modulePath path="$PROJECT_DIR$/languages/End2EndSimplified/End2EndSimplified.mpl" folder="" />
+      <modulePath path="$PROJECT_DIR$/languages/End2EndSimplified/sandbox/End2EndSimplified.sandbox.msd" folder="" />
+    </projectModules>
+  </component>
+</project>
