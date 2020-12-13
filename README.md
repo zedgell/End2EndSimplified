@@ -16,7 +16,7 @@ This is far from complete. If you want to contribute feel free to.
   * id
   * className
   * linkText
-* expect type to equal param
+* expect type in varible to equal param
   # types are:
   * text
 
