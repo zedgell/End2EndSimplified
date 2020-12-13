@@ -17,8 +17,15 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptCanvas = createDescriptorForCanvas();
   /*package*/ final ConceptDescriptor myConceptClick = createDescriptorForClick();
   /*package*/ final ConceptDescriptor myConceptClickRefernce = createDescriptorForClickRefernce();
+  /*package*/ final ConceptDescriptor myConceptExpect = createDescriptorForExpect();
+  /*package*/ final ConceptDescriptor myConceptExpectRefernce = createDescriptorForExpectRefernce();
+  /*package*/ final ConceptDescriptor myConceptExpectTypes = createDescriptorForExpectTypes();
+  /*package*/ final ConceptDescriptor myConceptVarible = createDescriptorForVarible();
   /*package*/ final ConceptDescriptor myConceptWait = createDescriptorForWait();
   /*package*/ final ConceptDescriptor myConceptclickButtons = createDescriptorForclickButtons();
+  /*package*/ final ConceptDescriptor myConceptfindBy = createDescriptorForfindBy();
+  /*package*/ final ConceptDescriptor myConceptfindByRefernce = createDescriptorForfindByRefernce();
+  /*package*/ final ConceptDescriptor myConceptfindByTypes = createDescriptorForfindByTypes();
   /*package*/ final ConceptDescriptor myConceptscreenshot = createDescriptorForscreenshot();
   private final LanguageConceptSwitch myIndexSwitch;
 
@@ -34,7 +41,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   @Override
   public Collection<ConceptDescriptor> getDescriptors() {
-    return Arrays.asList(myConceptAction, myConceptCanvas, myConceptClick, myConceptClickRefernce, myConceptWait, myConceptclickButtons, myConceptscreenshot);
+    return Arrays.asList(myConceptAction, myConceptCanvas, myConceptClick, myConceptClickRefernce, myConceptExpect, myConceptExpectRefernce, myConceptExpectTypes, myConceptVarible, myConceptWait, myConceptclickButtons, myConceptfindBy, myConceptfindByRefernce, myConceptfindByTypes, myConceptscreenshot);
   }
 
   @Override
@@ -49,10 +56,24 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptClick;
       case LanguageConceptSwitch.ClickRefernce:
         return myConceptClickRefernce;
+      case LanguageConceptSwitch.Expect:
+        return myConceptExpect;
+      case LanguageConceptSwitch.ExpectRefernce:
+        return myConceptExpectRefernce;
+      case LanguageConceptSwitch.ExpectTypes:
+        return myConceptExpectTypes;
+      case LanguageConceptSwitch.Varible:
+        return myConceptVarible;
       case LanguageConceptSwitch.Wait:
         return myConceptWait;
       case LanguageConceptSwitch.clickButtons:
         return myConceptclickButtons;
+      case LanguageConceptSwitch.findBy:
+        return myConceptfindBy;
+      case LanguageConceptSwitch.findByRefernce:
+        return myConceptfindByRefernce;
+      case LanguageConceptSwitch.findByTypes:
+        return myConceptfindByTypes;
       case LanguageConceptSwitch.screenshot:
         return myConceptscreenshot;
       default:
@@ -103,6 +124,46 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.associate("target", 0x66075fb65b463695L).target(0x3797ae2e6d9d425bL, 0xa7f89fe085cb1810L, 0x66075fb65b46366cL).optional(false).origin("7351950153525638805").done();
     return b.create();
   }
+  private static ConceptDescriptor createDescriptorForExpect() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("End2EndSimplified", "Expect", 0x3797ae2e6d9d425bL, 0xa7f89fe085cb1810L, 0x62655555b4cc8fdL);
+    b.class_(false, false, true);
+    b.super_("End2EndSimplified.structure.Action", 0x3797ae2e6d9d425bL, 0xa7f89fe085cb1810L, 0x122ee31aafdee25dL);
+    b.origin("r:7ad78c9e-5ea8-4c5e-949d-e12666dc0a6a(End2EndSimplified.structure)/443135438434912509");
+    b.version(2);
+    b.property("value", 0x62655555b4d7853L).type(PrimitiveTypeId.STRING).origin("443135438434957395").done();
+    b.associate("varible", 0x62655555b4d77dfL).target(0x3797ae2e6d9d425bL, 0xa7f89fe085cb1810L, 0x62655555b108e15L).optional(false).origin("443135438434957279").done();
+    b.aggregate("type", 0x62655555b4d7815L).target(0x3797ae2e6d9d425bL, 0xa7f89fe085cb1810L, 0x62655555b4cc914L).optional(false).ordered(true).multiple(false).origin("443135438434957333").done();
+    b.alias("expect");
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForExpectRefernce() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("End2EndSimplified", "ExpectRefernce", 0x3797ae2e6d9d425bL, 0xa7f89fe085cb1810L, 0x62655555b4cc914L);
+    b.class_(false, false, false);
+    b.origin("r:7ad78c9e-5ea8-4c5e-949d-e12666dc0a6a(End2EndSimplified.structure)/443135438434912532");
+    b.version(2);
+    b.associate("target", 0x62655555b4cc915L).target(0x3797ae2e6d9d425bL, 0xa7f89fe085cb1810L, 0x62655555b4cc8feL).optional(false).origin("443135438434912533").done();
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForExpectTypes() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("End2EndSimplified", "ExpectTypes", 0x3797ae2e6d9d425bL, 0xa7f89fe085cb1810L, 0x62655555b4cc8feL);
+    b.class_(false, false, true);
+    b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
+    b.origin("r:7ad78c9e-5ea8-4c5e-949d-e12666dc0a6a(End2EndSimplified.structure)/443135438434912510");
+    b.version(2);
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForVarible() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("End2EndSimplified", "Varible", 0x3797ae2e6d9d425bL, 0xa7f89fe085cb1810L, 0x62655555b108e15L);
+    b.class_(false, false, false);
+    b.super_("End2EndSimplified.structure.Action", 0x3797ae2e6d9d425bL, 0xa7f89fe085cb1810L, 0x122ee31aafdee25dL);
+    b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
+    b.origin("r:7ad78c9e-5ea8-4c5e-949d-e12666dc0a6a(End2EndSimplified.structure)/443135438430965269");
+    b.version(2);
+    b.property("param", 0x62655555b40eb47L).type(PrimitiveTypeId.STRING).origin("443135438434134855").done();
+    b.aggregate("findBy", 0x62655555b405181L).target(0x3797ae2e6d9d425bL, 0xa7f89fe085cb1810L, 0x62655555b3cf064L).optional(false).ordered(true).multiple(false).origin("443135438434095489").done();
+    b.alias("varible");
+    return b.create();
+  }
   private static ConceptDescriptor createDescriptorForWait() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("End2EndSimplified", "Wait", 0x3797ae2e6d9d425bL, 0xa7f89fe085cb1810L, 0x66075fb65b46dcdcL);
     b.class_(false, false, false);
@@ -120,6 +181,32 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.origin("r:7ad78c9e-5ea8-4c5e-949d-e12666dc0a6a(End2EndSimplified.structure)/7351950153525638764");
     b.version(2);
     b.alias("click buttons");
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForfindBy() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("End2EndSimplified", "findBy", 0x3797ae2e6d9d425bL, 0xa7f89fe085cb1810L, 0x62655555b39f14cL);
+    b.class_(false, false, true);
+    b.origin("r:7ad78c9e-5ea8-4c5e-949d-e12666dc0a6a(End2EndSimplified.structure)/443135438433677644");
+    b.version(2);
+    b.property("param", 0x62655555b39f14dL).type(PrimitiveTypeId.STRING).origin("443135438433677645").done();
+    b.alias("findBy");
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForfindByRefernce() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("End2EndSimplified", "findByRefernce", 0x3797ae2e6d9d425bL, 0xa7f89fe085cb1810L, 0x62655555b3cf064L);
+    b.class_(false, false, false);
+    b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
+    b.origin("r:7ad78c9e-5ea8-4c5e-949d-e12666dc0a6a(End2EndSimplified.structure)/443135438433874020");
+    b.version(2);
+    b.associate("target", 0x62655555b3cf065L).target(0x3797ae2e6d9d425bL, 0xa7f89fe085cb1810L, 0x62655555b39f14fL).optional(false).origin("443135438433874021").done();
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForfindByTypes() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("End2EndSimplified", "findByTypes", 0x3797ae2e6d9d425bL, 0xa7f89fe085cb1810L, 0x62655555b39f14fL);
+    b.class_(false, false, true);
+    b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
+    b.origin("r:7ad78c9e-5ea8-4c5e-949d-e12666dc0a6a(End2EndSimplified.structure)/443135438433677647");
+    b.version(2);
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForscreenshot() {

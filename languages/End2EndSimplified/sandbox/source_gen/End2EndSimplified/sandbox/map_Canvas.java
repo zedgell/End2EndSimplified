@@ -5,6 +5,8 @@ package End2EndSimplified.sandbox;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.junit.Assert;
 
 public class map_Canvas {
   public static void main(String[] args) throws InterruptedException {
@@ -54,6 +56,8 @@ public class map_Canvas {
     } catch (InterruptedException e) {
       e.printStackTrace();
     }
+    WebElement test = driver.findElement(By.linkText("Pricing"));
+    Assert.assertEquals("Pricing", test.getText());
     driver.quit();
   }
 }

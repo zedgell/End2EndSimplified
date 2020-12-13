@@ -13,9 +13,16 @@ public final class LanguageConceptSwitch {
   public static final int Canvas = 1;
   public static final int Click = 2;
   public static final int ClickRefernce = 3;
-  public static final int Wait = 4;
-  public static final int clickButtons = 5;
-  public static final int screenshot = 6;
+  public static final int Expect = 4;
+  public static final int ExpectRefernce = 5;
+  public static final int ExpectTypes = 6;
+  public static final int Varible = 7;
+  public static final int Wait = 8;
+  public static final int clickButtons = 9;
+  public static final int findBy = 10;
+  public static final int findByRefernce = 11;
+  public static final int findByTypes = 12;
+  public static final int screenshot = 13;
 
   public LanguageConceptSwitch() {
     LanguageConceptIndexBuilder builder = new LanguageConceptIndexBuilder(0x3797ae2e6d9d425bL, 0xa7f89fe085cb1810L);
@@ -23,8 +30,15 @@ public final class LanguageConceptSwitch {
     builder.put(0x122ee31aafdee2a0L, Canvas);
     builder.put(0x122ee31aafdee25eL, Click);
     builder.put(0x66075fb65b455a11L, ClickRefernce);
+    builder.put(0x62655555b4cc8fdL, Expect);
+    builder.put(0x62655555b4cc914L, ExpectRefernce);
+    builder.put(0x62655555b4cc8feL, ExpectTypes);
+    builder.put(0x62655555b108e15L, Varible);
     builder.put(0x66075fb65b46dcdcL, Wait);
     builder.put(0x66075fb65b46366cL, clickButtons);
+    builder.put(0x62655555b39f14cL, findBy);
+    builder.put(0x62655555b3cf064L, findByRefernce);
+    builder.put(0x62655555b39f14fL, findByTypes);
     builder.put(0x122ee31aafe25c9cL, screenshot);
     myIndex = builder.seal();
   }

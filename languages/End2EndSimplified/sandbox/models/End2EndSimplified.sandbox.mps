@@ -35,7 +35,10 @@
     <import index="dnjs" ref="3797ae2e-6d9d-425b-a7f8-9fe085cb1810/java:org.openqa.selenium.interactions.touch(End2EndSimplified/)" />
     <import index="pxu0" ref="3797ae2e-6d9d-425b-a7f8-9fe085cb1810/java:org.openqa.selenium.remote.html5(End2EndSimplified/)" />
     <import index="cjpv" ref="3797ae2e-6d9d-425b-a7f8-9fe085cb1810/java:org.openqa.selenium.remote.service(End2EndSimplified/)" />
+    <import index="rjhg" ref="49808fad-9d41-4b96-83fa-9231640f6b2b/java:org.junit(JUnit/)" />
     <import index="xjdl" ref="r:c7950cd9-753b-4dcc-ba36-a6118d95145d(End2EndSimplified.clickTypes)" implicit="true" />
+    <import index="6rdb" ref="r:e569ebe7-be3d-45b9-b373-bb1c01595a4d(End2EndSimplified.findByType)" implicit="true" />
+    <import index="jwdm" ref="r:986a05a9-ae2e-46c0-81ce-993ada6bc9f9(End2EndSimplified.expectType)" implicit="true" />
   </imports>
   <registry>
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
@@ -57,6 +60,21 @@
       <concept id="1310234245370667680" name="End2EndSimplified.structure.Canvas" flags="ng" index="2XW06U">
         <property id="7351950153525659494" name="URL" index="Xgtzg" />
         <child id="1310234245370667681" name="actions" index="2XW06V" />
+      </concept>
+      <concept id="443135438433874020" name="End2EndSimplified.structure.findByRefernce" flags="ng" index="1t6EkL">
+        <reference id="443135438433874021" name="target" index="1t6EkK" />
+      </concept>
+      <concept id="443135438430965269" name="End2EndSimplified.structure.Varible" flags="ng" index="1tdHH0">
+        <property id="443135438434134855" name="param" index="1tpFSi" />
+        <child id="443135438434095489" name="findBy" index="1tpwjk" />
+      </concept>
+      <concept id="443135438434912532" name="End2EndSimplified.structure.ExpectRefernce" flags="ng" index="1tqDL1">
+        <reference id="443135438434912533" name="target" index="1tqDL0" />
+      </concept>
+      <concept id="443135438434912509" name="End2EndSimplified.structure.Expect" flags="ng" index="1tqDQC">
+        <property id="443135438434957395" name="value" index="1tqMO6" />
+        <reference id="443135438434957279" name="varible" index="1tqMaa" />
+        <child id="443135438434957333" name="type" index="1tqMP0" />
       </concept>
     </language>
   </registry>
@@ -95,6 +113,20 @@
     </node>
     <node concept="XgodE" id="oAlllr3y8_" role="2XW06V">
       <property role="XgodF" value="4000" />
+    </node>
+    <node concept="1tdHH0" id="oAlllrgTEe" role="2XW06V">
+      <property role="TrG5h" value="test" />
+      <property role="1tpFSi" value="Pricing" />
+      <node concept="1t6EkL" id="oAlllrgTEy" role="1tpwjk">
+        <ref role="1t6EkK" to="6rdb:oAlllrf51I" resolve="linkText" />
+      </node>
+    </node>
+    <node concept="1tqDQC" id="oAlllrkn8S" role="2XW06V">
+      <property role="1tqMO6" value="Pricing" />
+      <ref role="1tqMaa" node="oAlllrgTEe" resolve="test" />
+      <node concept="1tqDL1" id="oAlllrkn9b" role="1tqMP0">
+        <ref role="1tqDL0" to="jwdm:oAlllrjnvu" resolve="text" />
+      </node>
     </node>
   </node>
   <node concept="2XW06U" id="18ISLEJSqHU">

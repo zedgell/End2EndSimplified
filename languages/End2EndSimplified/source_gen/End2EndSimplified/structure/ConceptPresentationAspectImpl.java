@@ -13,8 +13,15 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_Canvas;
   private ConceptPresentation props_Click;
   private ConceptPresentation props_ClickRefernce;
+  private ConceptPresentation props_Expect;
+  private ConceptPresentation props_ExpectRefernce;
+  private ConceptPresentation props_ExpectTypes;
+  private ConceptPresentation props_Varible;
   private ConceptPresentation props_Wait;
   private ConceptPresentation props_clickButtons;
+  private ConceptPresentation props_findBy;
+  private ConceptPresentation props_findByRefernce;
+  private ConceptPresentation props_findByTypes;
   private ConceptPresentation props_screenshot;
 
   @Override
@@ -49,6 +56,34 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_ClickRefernce = cpb.create();
         }
         return props_ClickRefernce;
+      case LanguageConceptSwitch.Expect:
+        if (props_Expect == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("expect");
+          props_Expect = cpb.create();
+        }
+        return props_Expect;
+      case LanguageConceptSwitch.ExpectRefernce:
+        if (props_ExpectRefernce == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByReference(0x3797ae2e6d9d425bL, 0xa7f89fe085cb1810L, 0x62655555b4cc914L, 0x62655555b4cc915L, "target", "", "");
+          props_ExpectRefernce = cpb.create();
+        }
+        return props_ExpectRefernce;
+      case LanguageConceptSwitch.ExpectTypes:
+        if (props_ExpectTypes == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByName();
+          props_ExpectTypes = cpb.create();
+        }
+        return props_ExpectTypes;
+      case LanguageConceptSwitch.Varible:
+        if (props_Varible == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByName();
+          props_Varible = cpb.create();
+        }
+        return props_Varible;
       case LanguageConceptSwitch.Wait:
         if (props_Wait == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -63,6 +98,27 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_clickButtons = cpb.create();
         }
         return props_clickButtons;
+      case LanguageConceptSwitch.findBy:
+        if (props_findBy == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("findBy");
+          props_findBy = cpb.create();
+        }
+        return props_findBy;
+      case LanguageConceptSwitch.findByRefernce:
+        if (props_findByRefernce == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByName();
+          props_findByRefernce = cpb.create();
+        }
+        return props_findByRefernce;
+      case LanguageConceptSwitch.findByTypes:
+        if (props_findByTypes == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByName();
+          props_findByTypes = cpb.create();
+        }
+        return props_findByTypes;
       case LanguageConceptSwitch.screenshot:
         if (props_screenshot == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

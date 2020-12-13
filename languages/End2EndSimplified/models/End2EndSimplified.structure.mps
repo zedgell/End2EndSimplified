@@ -6,8 +6,8 @@
     <devkit ref="78434eb8-b0e5-444b-850d-e7c4ad2da9ab(jetbrains.mps.devkit.aspect.structure)" />
   </languages>
   <imports>
+    <import index="4fqr" ref="r:fa713d69-08ea-4732-b1f2-cb07f9e103ef(jetbrains.mps.execution.util.structure)" />
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
-    <import index="4fqr" ref="r:fa713d69-08ea-4732-b1f2-cb07f9e103ef(jetbrains.mps.execution.util.structure)" implicit="true" />
   </imports>
   <registry>
     <language id="c72da2b9-7cce-4447-8389-f407dc1158b7" name="jetbrains.mps.lang.structure">
@@ -137,6 +137,107 @@
       <property role="IQ2nx" value="7351950153525681373" />
       <property role="TrG5h" value="Time" />
       <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="oAlllr48Sl">
+    <property role="EcuMT" value="443135438430965269" />
+    <property role="TrG5h" value="Varible" />
+    <property role="34LRSv" value="varible" />
+    <ref role="1TJDcQ" node="18ISLEJRI9t" resolve="Action" />
+    <node concept="PrWs8" id="oAlllr48Sm" role="PzmwI">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+    <node concept="1TJgyj" id="oAlllrg561" role="1TKVEi">
+      <property role="IQ2ns" value="443135438434095489" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="findBy" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="oAlllrff1$" resolve="findByRefernce" />
+    </node>
+    <node concept="1TJgyi" id="oAlllrgeH7" role="1TKVEl">
+      <property role="IQ2nx" value="443135438434134855" />
+      <property role="TrG5h" value="param" />
+      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="oAlllrev5c">
+    <property role="EcuMT" value="443135438433677644" />
+    <property role="TrG5h" value="findBy" />
+    <property role="19KtqR" value="true" />
+    <property role="34LRSv" value="findBy" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyi" id="oAlllrev5d" role="1TKVEl">
+      <property role="IQ2nx" value="443135438433677645" />
+      <property role="TrG5h" value="param" />
+      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="oAlllrev5f">
+    <property role="EcuMT" value="443135438433677647" />
+    <property role="TrG5h" value="findByTypes" />
+    <property role="19KtqR" value="true" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="PrWs8" id="oAlllrev5g" role="PzmwI">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="oAlllrff1$">
+    <property role="EcuMT" value="443135438433874020" />
+    <property role="TrG5h" value="findByRefernce" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="oAlllrff1_" role="1TKVEi">
+      <property role="IQ2ns" value="443135438433874021" />
+      <property role="20kJfa" value="target" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="oAlllrev5f" resolve="findByTypes" />
+    </node>
+    <node concept="PrWs8" id="oAlllrgyDv" role="PzmwI">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="oAlllrjczX">
+    <property role="EcuMT" value="443135438434912509" />
+    <property role="TrG5h" value="Expect" />
+    <property role="19KtqR" value="true" />
+    <property role="34LRSv" value="expect" />
+    <ref role="1TJDcQ" node="18ISLEJRI9t" resolve="Action" />
+    <node concept="1TJgyj" id="oAlllrjnvv" role="1TKVEi">
+      <property role="IQ2ns" value="443135438434957279" />
+      <property role="20kJfa" value="varible" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="oAlllr48Sl" resolve="Varible" />
+    </node>
+    <node concept="1TJgyj" id="oAlllrjnwl" role="1TKVEi">
+      <property role="IQ2ns" value="443135438434957333" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="type" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="oAlllrjc$k" resolve="ExpectRefernce" />
+    </node>
+    <node concept="1TJgyi" id="oAlllrjnxj" role="1TKVEl">
+      <property role="IQ2nx" value="443135438434957395" />
+      <property role="TrG5h" value="value" />
+      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="oAlllrjczY">
+    <property role="EcuMT" value="443135438434912510" />
+    <property role="TrG5h" value="ExpectTypes" />
+    <property role="19KtqR" value="true" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="PrWs8" id="oAlllrjczZ" role="PzmwI">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="oAlllrjc$k">
+    <property role="EcuMT" value="443135438434912532" />
+    <property role="TrG5h" value="ExpectRefernce" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="oAlllrjc$l" role="1TKVEi">
+      <property role="IQ2ns" value="443135438434912533" />
+      <property role="20kJfa" value="target" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="oAlllrjczY" resolve="ExpectTypes" />
     </node>
   </node>
 </model>
