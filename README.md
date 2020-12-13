@@ -5,26 +5,37 @@ This is far from complete. If you want to contribute feel free to.
 
 # Commands
 * wait timeInMs
-* click by type param param
+* click by type param
   # types are:
   * id
   * className
   * linkText
+* set varible to webElement using find by
+* find by type param
+  # types are:
+  * id
+  * className
+  * linkText
+* expect type to equal param
+  # types are:
+  * text
 
  # To run
   * Change the chromeDriver file location to where yours is located. You can change it in the generator main file
   * Fix up a test. A example is below
  # Example
  ```
- test example URL: https://www.test.com 
-  wait 5000                            
-  wait 6000                            
-  click by className param gauge-button
-  wait 2000                            
-  click by linkText param Tour         
-  wait 3000                            
-  click by linkText param Pricing      
-  wait 4000
+test URL: https://www.test.com 
+  wait 5000                                    
+  wait 6000                                    
+  click by className param gauge-button        
+  wait 2000                                    
+  click by linkText param Tour                 
+  wait 3000                                    
+  click by linkText param Pricing              
+  wait 4000                                    
+  varible test = find By linkText param Pricing
+  Expect text in test to equal Pricing         
 ```
 # The generated output
 ```Java
@@ -84,6 +95,8 @@ public class map_Canvas {
     } catch (InterruptedException e) {
       e.printStackTrace();
     }
+    WebElement test = driver.findElement(By.linkText("Pricing"));
+    Assert.assertEquals("Pricin", test.getText());
     driver.quit();
   }
 }
