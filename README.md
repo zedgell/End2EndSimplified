@@ -4,19 +4,19 @@ A DSL Still in the works for End 2 End Test
 This is far from complete. If you want to contribute feel free to.
 
 # Commands
-* wait timeInMs
-* click by type param
+* wait ```timeInMs```
+* click by ```type``` ```param```
   # types are:
   * id
   * className
   * linkText
 * set varible to webElement using find by
-* find by type param
+* find by ```type``` ```param```
   # types are:
   * id
   * className
   * linkText
-* expect type in varible to equal param
+* expect ```type``` in ```varible``` to equal ```param```
   # types are:
   * text
 
