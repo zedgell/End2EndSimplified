@@ -96,7 +96,7 @@ public class map_Canvas {
       e.printStackTrace();
     }
     WebElement test = driver.findElement(By.linkText("Pricing"));
-    Assert.assertEquals("Pricin", test.getText());
+    Assert.assertEquals("Pricing", test.getText());
     driver.quit();
   }
 }
